@@ -1,7 +1,7 @@
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
 
-export default function Index() {
+const Index = () => {
   return (
     <main>
       <Container>
@@ -9,4 +9,6 @@ export default function Index() {
       </Container>
     </main>
   );
-}
+};
+
+export default Index;

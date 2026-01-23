@@ -8,7 +8,7 @@ import Container from "@/app/_components/container";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 
-export default async function Post(props: Params) {
+const Post = async (props: Params) => {
   const params = await props.params;
   const project = getProjectBySlug(params.slug);
 
@@ -33,7 +33,7 @@ export default async function Post(props: Params) {
       </Container>
     </main>
   );
-}
+};
 
 type Params = {
   params: Promise<{
@@ -41,7 +41,7 @@ type Params = {
   }>;
 };
 
-export async function generateMetadata(props: Params): Promise<Metadata> {
+export const generateMetadata = async (props: Params): Promise<Metadata> => {
   const params = await props.params;
   const project = getProjectBySlug(params.slug);
 
@@ -58,12 +58,14 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       images: [project.ogImage.url],
     },
   };
-}
+};
 
-export async function generateStaticParams() {
+export const generateStaticParams = async () => {
   const projects = getAllProjects();
 
   return projects.map((project) => ({
     slug: project.slug,
   }));
-}
+};
+
+export default Post;
