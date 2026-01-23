@@ -8,6 +8,7 @@ import {
   faFolderOpen,
   faFileLines,
 } from "@fortawesome/free-solid-svg-icons";
+import Avatar from "./avatar";
 
 const routes = [
   { href: "/projects", label: "Projects", isDir: true },
@@ -18,7 +19,13 @@ const Header = () => {
   return (
     <header className="mb-8 w-full">
       <Container>
-        <h1 className="px-4 py-4 font-bold">Mikaelsen-Cunningham</h1>
+        <div className="flex px-4 py-4 items-center mb-4">
+          <Avatar
+            name="Avatar picture of Robyn Mikaelsen-cunningham"
+            picture="/avatar.png"
+          />
+          <h1 className="font-bold">Mikaelsen-Cunningham</h1>
+        </div>
         <nav>
           <ul className="grid gap-6 grid-cols-[repeat(auto-fit,8rem)] grid-rows-[repeat(auto-fit,minmax(9rem,1fr))]">
             {routes.map((route) => (
