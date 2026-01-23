@@ -28,7 +28,7 @@ const RootLayout = ({
       <body
         className={cn(
           roboto.className,
-          "flex flex-col min-h-screen items-center w-full px-4",
+          "flex flex-col min-h-screen items-center ",
           "bg-gray-50 text-gray-700 antialiased",
           "dark:bg-stone-900 dark:text-slate-200",
         )}

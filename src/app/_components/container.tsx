@@ -3,7 +3,7 @@ type Props = {
 };
 
 const Container = ({ children }: Props) => {
-  return <div className="mx-auto px-5 max-w-screen-xl">{children}</div>;
+  return <div className="mx-auto px-4 md:px-6 max-w-screen-xl">{children}</div>;
 };
 
 export default Container;

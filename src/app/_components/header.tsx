@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className="mb-8 w-full">
       <Container>
-        <div className="flex px-4 py-4 items-center mb-4">
+        <div className="flex py-4 items-center mb-4">
           <Avatar
             name="Avatar picture of Robyn Mikaelsen-cunningham"
             picture="/avatar.png"
