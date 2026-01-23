@@ -2,7 +2,12 @@ import Link from "next/link";
 import Container from "./container";
 import cn from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFolder, faFile } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFolder,
+  faFile,
+  faFolderOpen,
+  faFileLines,
+} from "@fortawesome/free-solid-svg-icons";
 
 const routes = [
   { href: "/projects", label: "Projects", isDir: true },
@@ -22,13 +27,22 @@ const Header = () => {
                   href={route.href}
                   className={cn(
                     route.isDir ? "dir" : "file",
-                    "flex flex-col justify-start items-center text-center h-full",
+                    "flex flex-col gap-1 justify-start items-center text-center h-min rounded-md outline-offset-4 outline-none focus-visible:outline-slate-300 group ",
                   )}
                 >
-                  <div className="p-4 h-32 flex">
-                    <FontAwesomeIcon icon={route.isDir ? faFolder : faFile} />
+                  <div className="mt-0.5 py-1.5 px-2 h-24 flex rounded-md group-focus-visible:bg-opacity-60 group-focus-visible:bg-gray-300 ">
+                    <FontAwesomeIcon
+                      icon={route.isDir ? faFolder : faFile}
+                      className="group-hover:hidden group-focus-visible:hidden"
+                    />
+                    <FontAwesomeIcon
+                      icon={route.isDir ? faFolderOpen : faFileLines}
+                      className="hidden group-hover:inline-block group-focus-visible:inline-block"
+                    />
                   </div>
-                  <p className="p-0.5">{route.label}</p>
+                  <p className="py-0.5 px-2 rounded-md group-focus-visible:bg-opacity-60 group-focus-visible:bg-gray-300 ">
+                    {route.label}
+                  </p>
                 </Link>
               </li>
             ))}
