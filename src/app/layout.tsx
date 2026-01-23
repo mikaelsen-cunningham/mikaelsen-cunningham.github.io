@@ -11,10 +11,11 @@ import Header from "./_components/header";
 const roboto = Roboto({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mikaelsen-cunningham.github.io/"),
   title: `Robyn Mikaelsen-Cunningham`,
   description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
   openGraph: {
-    images: "./avatar.png",
+    images: "/avatar.png",
   },
 };
 
