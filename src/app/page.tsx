@@ -1,13 +1,14 @@
 import Container from "@/app/_components/container";
+import PageLayout from "@/app/_components/page-layout";
 import { Intro } from "@/app/_components/intro";
 
 const Index = () => {
   return (
-    <main>
+    <PageLayout segments={[]}>
       <Container>
         <Intro />
       </Container>
-    </main>
+    </PageLayout>
   );
 };
 

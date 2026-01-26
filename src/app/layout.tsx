@@ -37,10 +37,7 @@ const RootLayout = ({
           "dark:bg-stone-900 dark:text-slate-200",
         )}
       >
-        <Header />
-        <ThemeSwitcher />
-        <div className="min-h-screen">{children}</div>
-        <Footer />
+        {children}
       </body>
     </html>
   );
