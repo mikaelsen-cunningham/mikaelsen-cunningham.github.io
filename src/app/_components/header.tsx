@@ -21,10 +21,10 @@ const Header = () => {
       <Container>
         <div className="flex py-4 items-center mb-4">
           <Avatar
-            name="Avatar picture of Robyn Mikaelsen-cunningham"
+            name="Mikaelsen-cunningham"
+            pictureAlt="Avatar picture of Robyn Mikaelsen-cunningham"
             picture="/avatar.png"
           />
-          <h1 className="font-bold">Mikaelsen-Cunningham</h1>
         </div>
         <nav>
           <ul className="grid gap-6 grid-cols-[repeat(auto-fit,8rem)] grid-rows-[repeat(auto-fit,minmax(9rem,1fr))]">
@@ -37,17 +37,17 @@ const Header = () => {
                     "flex flex-col gap-1 justify-start items-center text-center h-min rounded-md outline-offset-4 outline-none focus-visible:outline-slate-300 group ",
                   )}
                 >
-                  <div className="mt-0.5 py-1.5 px-2 h-24 flex rounded-md group-focus-visible:bg-opacity-60 group-focus-visible:bg-gray-300 ">
+                  <div className="mt-0.5 py-1.5 px-2 h-24 flex rounded-md group-focus-visible:bg-opacity-60 group-focus-visible:bg-gray-300 group-active:bg-gray-300 group-active:bg-opacity-60">
                     <FontAwesomeIcon
                       icon={route.isDir ? faFolder : faFile}
-                      className="group-hover:hidden group-focus-visible:hidden"
+                      className="group-hover:hidden group-focus-visible:hidden group-active:hidden"
                     />
                     <FontAwesomeIcon
                       icon={route.isDir ? faFolderOpen : faFileLines}
-                      className="hidden group-hover:inline-block group-focus-visible:inline-block"
+                      className="hidden group-hover:inline-block group-focus-visible:inline-block group-active:inline-block"
                     />
                   </div>
-                  <p className="py-0.5 px-2 rounded-md group-focus-visible:bg-opacity-60 group-focus-visible:bg-gray-300 ">
+                  <p className="py-0.5 px-2 rounded-md group-focus-visible:bg-opacity-60 group-focus-visible:bg-gray-300 group-active:bg-opacity-60 group-active:bg-gray-300">
                     {route.label}
                   </p>
                 </Link>
