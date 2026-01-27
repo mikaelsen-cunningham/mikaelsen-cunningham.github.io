@@ -1,7 +1,7 @@
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
 import PageLayout from "@/app/_components/page-layout";
-import { getContentBySlug } from "@/lib/api";
+import { getContentBySlug } from "@/lib/getPageDetail";
 
 const About = async () => {
   const aboutPageContent = getContentBySlug("about");

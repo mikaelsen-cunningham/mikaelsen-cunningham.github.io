@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllProjects, getProjectBySlug } from "@/lib/api";
+import { getAllProjects, getProjectBySlug } from "@/lib/getPageDetail";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 
