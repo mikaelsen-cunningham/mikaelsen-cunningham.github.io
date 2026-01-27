@@ -9,12 +9,10 @@ const routes = [
 ];
 
 const Header = ({ pathSegments }: { pathSegments: string[] }) => {
-  console.log(getBreadcrumbs(pathSegments));
   const breadcrumbs = getBreadcrumbs(pathSegments);
-  console.log("Header pathSegments:", { pathSegments });
   const isHomepage = pathSegments.length === 0;
   return (
-    <header className="mb-8 w-full">
+    <header>
       <Container>
         {isHomepage ? (
           <>
