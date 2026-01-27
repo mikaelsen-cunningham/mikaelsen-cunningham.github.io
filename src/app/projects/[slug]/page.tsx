@@ -10,7 +10,7 @@ import Alert from "@/app/_components/alert";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 
-const Post = async (props: Params) => {
+export const generateMetadata = async (props: Params): Promise<Metadata> => {
   const params = await props.params;
   const project = getProjectBySlug(params.slug);
 
@@ -18,7 +18,35 @@ const Post = async (props: Params) => {
     return notFound();
   }
 
+  const title = `${project.title} | Next.js Blog Example with ${CMS_NAME}`;
+
+  return {
+    title,
+    openGraph: {
+      title,
+      images: [project.ogImage.url],
+    },
+  };
+};
+
+export const generateStaticParams = async () => {
+  const projects = getAllProjects();
+  return projects.map((project) => {
+    return {
+      slug: project.slug,
+    };
+  });
+};
+
+const Project = async ({ params }: Params) => {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+
+  if (!project) {
+    return notFound();
+  }
   const content = await markdownToHtml(project.content || "");
+
   return (
     <PageLayout segments={["projects", project.slug]}>
       <Alert preview={project.preview} />
@@ -43,31 +71,4 @@ type Params = {
   }>;
 };
 
-export const generateMetadata = async (props: Params): Promise<Metadata> => {
-  const params = await props.params;
-  const project = getProjectBySlug(params.slug);
-
-  if (!project) {
-    return notFound();
-  }
-
-  const title = `${project.title} | Next.js Blog Example with ${CMS_NAME}`;
-
-  return {
-    title,
-    openGraph: {
-      title,
-      images: [project.ogImage.url],
-    },
-  };
-};
-
-export const generateStaticParams = async () => {
-  const projects = getAllProjects();
-
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
-};
-
-export default Post;
+export default Project;
