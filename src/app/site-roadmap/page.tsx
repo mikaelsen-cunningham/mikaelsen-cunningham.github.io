@@ -3,14 +3,13 @@ import Container from "@/app/_components/container";
 import PageLayout from "@/app/_components/page-layout";
 import { getContentBySlug } from "@/lib/getPageDetail";
 
-const About = async () => {
-  const aboutPageContent = getContentBySlug("about");
-  const content = await markdownToHtml(aboutPageContent?.content || "");
+const SiteRoadmap = async () => {
+  const todoPageContent = getContentBySlug("todo", process.cwd());
+  const content = await markdownToHtml(todoPageContent?.content || "");
   return (
-    <PageLayout segments={["about"]}>
+    <PageLayout segments={["site-roadmap"]}>
       <Container>
-        <div className="prose">
-          <h2 className="text-2xl font-bold mb-4">About Me Page</h2>
+        <div className="prose max-w-full">
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </Container>
@@ -18,4 +17,4 @@ const About = async () => {
   );
 };
 
-export default About;
+export default SiteRoadmap;

@@ -1,72 +1,113 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# Portfolio Site
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+A portfolio website featuring a Mac Finder-inspired design system, built as an iterative showcase of modern frontend development practices.
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates) feature using Markdown files as the data source.
+**🔗 [Live Demo](https://mikaelsen-cunningham.github.io)** | **📋 [Roadmap](TODO.md)**
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+![Mac Finder UI Screenshot](/assets/docs/design-screenshot.png)
 
-To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
+## About The Project
 
-## Demo
+This portfolio site demonstrates frontend development expertise through a unique Mac Finder-inspired interface. It's built as a working showcase that evolves with new features, following industry best practices for component architecture, responsive design, and accessibility.
 
-[https://next-blog-starter.vercel.app/](https://next-blog-starter.vercel.app/)
+**Built With:**
 
-## Deploy your own
+- [Next.js](https://nextjs.org/) - React framework
+- [React 19](https://react.dev/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter&project-name=blog-starter&repository-name=blog-starter)
+---
 
-### Related examples
+## Getting Started
 
-- [AgilityCMS](/examples/cms-agilitycms)
-- [Builder.io](/examples/cms-builder-io)
-- [ButterCMS](/examples/cms-buttercms)
-- [Contentful](/examples/cms-contentful)
-- [Cosmic](/examples/cms-cosmic)
-- [DatoCMS](/examples/cms-datocms)
-- [DotCMS](/examples/cms-dotcms)
-- [Drupal](/examples/cms-drupal)
-- [Enterspeed](/examples/cms-enterspeed)
-- [Ghost](/examples/cms-ghost)
-- [GraphCMS](/examples/cms-graphcms)
-- [Kontent.ai](/examples/cms-kontent-ai)
-- [MakeSwift](/examples/cms-makeswift)
-- [Payload](/examples/cms-payload)
-- [Plasmic](/examples/cms-plasmic)
-- [Prepr](/examples/cms-prepr)
-- [Prismic](/examples/cms-prismic)
-- [Sanity](/examples/cms-sanity)
-- [Sitecore XM Cloud](/examples/cms-sitecore-xmcloud)
-- [Sitefinity](/examples/cms-sitefinity)
-- [Storyblok](/examples/cms-storyblok)
-- [TakeShape](/examples/cms-takeshape)
-- [Tina](/examples/cms-tina)
-- [Umbraco](/examples/cms-umbraco)
-- [Umbraco heartcore](/examples/cms-umbraco-heartcore)
-- [Webiny](/examples/cms-webiny)
-- [WordPress](/examples/cms-wordpress)
-- [Blog Starter](/examples/blog-starter)
+### Prerequisites
 
-## How to use
+- Node.js 18.x or higher
+- npm, yarn, or pnpm
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+### Installation
 
 ```bash
-npx create-next-app --example blog-starter blog-starter-app
+# Clone the repo
+git clone https://github.com/mikaelsen-cunningham/mikaelsen-cunningham.github.io.git
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### Build for Production
 
 ```bash
-yarn create next-app --example blog-starter blog-starter-app
+npm run build
+npm run start
 ```
 
-```bash
-pnpm create next-app --example blog-starter blog-starter-app
+---
+
+## Project Structure
+
+```
+portfolio-site/
+├── _site-content/        # Markdown content
+│   ├── *.md              # Root pages (experience, etc.)
+│   └── projects/             # Project posts
+├── src/
+│   ├── app/              # Next.js app directory
+│   ├── components/       # React components
+│   └── lib/              # Utilities
+├── public/               # Static assets
+└── TODO.md               # Project roadmap
 ```
 
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+---
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Content Management
 
-# Notes
+Project posts and site content are written in Markdown with YAML front matter, stored in `_site-content/`:
 
-`blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
+```markdown
+---
+title: "Project Title"
+date: "2025-01-29"
+excerpt: "Brief description"
+---
+
+Post content here...
+```
+
+Add new `.md` files to `_site-content/project/` to create project posts.
+
+---
+
+## Roadmap
+
+See [TODO.md](TODO.md) for detailed roadmap and current sprint.
+
+**Current Focus:**
+
+- ✅ Content creation and documentation
+- 🔄 Gitflow implementation with GitHub Actions
+- 📋 Multi-environment deployment setup
+- 📋 External API migration (Phase 2)
+
+---
+
+## Contact
+
+Robyn Mikaelsen-Cunningham - mikaelsencunningham@outlook.com
+
+GitHub: [@mikaelsen-cunningham](https://github.com/mikaelsen-cunningham)
+
+---
+
+## Acknowledgments
+
+- [Next.js Blog Starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
+- Design inspired by macOS Finder
+- [Font Awesome](https://fontawesome.com/) for icons
