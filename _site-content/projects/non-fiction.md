@@ -1,6 +1,6 @@
 ---
-title: "Portfolio"
-excerpt: "A celebration of agile methodologies and minimum viable product focused feature development."
+title: "Non-fiction"
+excerpt: "Personal website template for individuals engaged in non-fiction pursuits"
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
@@ -10,4 +10,4 @@ ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
 
-The Portfolio project page explaining tech decisions and approach
+The Non-fiction personal site project page explaining target audience, tech decisions and approach
