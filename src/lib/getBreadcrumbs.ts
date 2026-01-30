@@ -6,6 +6,11 @@ const staticConfig: NavConfig = {
     href: "/experience",
     hasChildren: false,
   },
+  siteRoadmap: {
+    label: "Site Roadmap",
+    href: "/site-roadmap",
+    hasChildren: false,
+  },
   projects: {
     label: "Projects",
     href: "/projects",
