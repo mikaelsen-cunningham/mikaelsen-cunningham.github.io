@@ -5,7 +5,7 @@ import { getBreadcrumbs } from "@/lib/getBreadcrumbs";
 
 const routes = [
   { href: "/projects", label: "Projects", hasChildren: true },
-  { href: "/about", label: "About", hasChildren: false },
+  { href: "/experience", label: "Experience", hasChildren: false },
 ];
 
 const Header = ({ pathSegments }: { pathSegments: string[] }) => {

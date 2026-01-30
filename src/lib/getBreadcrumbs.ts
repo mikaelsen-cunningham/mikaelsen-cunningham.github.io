@@ -1,9 +1,9 @@
 import type { NavItem, NavConfig } from "../interfaces/navigation.js";
 
 const staticConfig: NavConfig = {
-  about: {
-    label: "About",
-    href: "/about",
+  experience: {
+    label: "Experience",
+    href: "/experience",
     hasChildren: false,
   },
   projects: {
