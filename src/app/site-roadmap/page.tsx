@@ -4,7 +4,7 @@ import PageLayout from "@/app/_components/page-layout";
 import { getContentBySlug } from "@/lib/getPageDetail";
 
 const SiteRoadmap = async () => {
-  const todoPageContent = getContentBySlug("todo", process.cwd());
+  const todoPageContent = getContentBySlug("TODO", process.cwd());
   const content = await markdownToHtml(todoPageContent?.content || "");
   return (
     <PageLayout segments={["site-roadmap"]}>

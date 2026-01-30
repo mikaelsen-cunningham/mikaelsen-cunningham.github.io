@@ -4,7 +4,7 @@ import { getContentBySlug } from "@/lib/getPageDetail";
 import markdownToHtml from "@/lib/markdownToHtml";
 
 const Index = async () => {
-  const readMeContent = getContentBySlug("readme", process.cwd());
+  const readMeContent = getContentBySlug("README", process.cwd());
   const content = await markdownToHtml(readMeContent?.content || "");
   return (
     <PageLayout segments={[]}>
