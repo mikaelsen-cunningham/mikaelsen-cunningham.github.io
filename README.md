@@ -100,7 +100,7 @@ See [TODO.md](TODO.md) for detailed roadmap and current sprint.
 
 ## Contact
 
-Robyn Mikaelsen-Cunningham - mikaelsencunningham@outlook.com
+Robyn Mikaelsen-Cunningham - mikaelsen-cunningham@outlook.com
 
 GitHub: [@mikaelsen-cunningham](https://github.com/mikaelsen-cunningham)
 
