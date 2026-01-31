@@ -2,21 +2,15 @@
 
 A portfolio website built with modern frontend technology, delivered through an iterative MVP approach 🚀. Content currently managed via local markdown files—an agile starting point that inspired the design system's file-explorer aesthetic 🗂️.
 
-A portfolio website combining modern frontend tech with agile MVP principles 🚀. Starting with markdown-based content management shaped the design—a file-explorer interface that celebrates the simplicity of local files while building toward a headless architecture 🗂️.
-
-A portfolio website built with modern frontend technology, delievered with an agile mvp, iterative and incremental approach 🚀. Inspired by classic file management applications such as Finder and File Explorer 🗂️.
-
-A portfolio website built with modern frontend technology, delievered with an iterative and incremental agile approach 🚀. Content managed and statically generated from local markdown files. Inspired by this minimum viable product choice the design system has been shaped by classic file management applications such as Finder and File Explorer 🗂️.
-
-**🔗 [Live Demo](https://mikaelsen-cunningham.github.io)** | **📋 [Roadmap](TODO.md)**
-
 ![Mac Finder UI Screenshot](/assets/docs/design-screenshot.png)
 
-## About The Project
+**🔗 [View Live Demo](https://mikaelsen-cunningham.github.io)**
+
+## About
 
 Actively developed with an iterative and agile approach, this portfolio project is a demonstration of the knowledge, skills and opinions I've developed in my [7+ years of experience in software development](/experience).
 
-This is a living portfolio project—actively developed with an iterative approach to modern web architecture. The current site is an in-flight **Phase 1** of the [Project Roadmap](/project-roadmap).
+This is a living portfolio project—actively developed with an iterative approach to modern web architecture. The current site is an in-flight **Phase 1** of the [Site Roadmap](/site-roadmap).
 
 **Current implementation** uses local markdown files for content management, enabling rapid deployment and version-controlled updates. This deliberate MVP choice validates core UX patterns and technical decisions before investing in complex infrastructure. The file-based content structure directly inspired the design system: a file-explorer interface that celebrates simplicity while remaining flexible enough to scale.
 
@@ -30,8 +24,6 @@ This is a living portfolio project—actively developed with an iterative approa
 - [React 19](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-
----
 
 ## Getting Started
 
@@ -62,8 +54,6 @@ npm run build
 npm run start
 ```
 
----
-
 ## Project Structure
 
 ```
@@ -78,8 +68,6 @@ portfolio-site/
 ├── public/               # Static assets
 └── TODO.md               # Project roadmap
 ```
-
----
 
 ## Content Management
 
@@ -97,8 +85,6 @@ Post content here...
 
 Add new `.md` files to `_site-content/project/` to create project posts.
 
----
-
 ## Roadmap
 
 See [TODO.md](TODO.md) for detailed roadmap and current sprint.
@@ -110,18 +96,8 @@ See [TODO.md](TODO.md) for detailed roadmap and current sprint.
 - 📋 Multi-environment deployment setup
 - 📋 External API migration (Phase 2)
 
----
-
 ## Contact
 
 Robyn Mikaelsen-Cunningham - mikaelsen-cunningham@outlook.com
 
 GitHub: [@mikaelsen-cunningham](https://github.com/mikaelsen-cunningham)
-
----
-
-## Acknowledgments
-
-- [Next.js Blog Starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
-- Design inspired by macOS Finder
-- [Font Awesome](https://fontawesome.com/) for icons
