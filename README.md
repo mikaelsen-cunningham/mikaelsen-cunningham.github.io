@@ -16,9 +16,11 @@ A portfolio website built with modern frontend technology, delievered with an it
 
 Actively developed with an iterative and agile approach, this portfolio project is a demonstration of the knowledge, skills and opinions I've developed in my [7+ years of experience in software development](/experience).
 
-This portfolio takes an iterative approach to modern web architecture. Starting with markdown-based content management allowed for rapid MVP delivery while shaping a file-explorer-inspired design system that celebrates simplicity.
+This is a living portfolio project—actively developed with an iterative approach to modern web architecture. The current site is an in-flight **Phase 1** of the [Project Roadmap](/project-roadmap).
 
-Future iterations will migrate to a headless CMS and external API. The current intention is that it will evolve into a fully decoupled MACH architecture.
+**Current implementation** uses local markdown files for content management, enabling rapid deployment and version-controlled updates. This deliberate MVP choice validates core UX patterns and technical decisions before investing in complex infrastructure. The file-based content structure directly inspired the design system: a file-explorer interface that celebrates simplicity while remaining flexible enough to scale.
+
+**Where it's going:** Future phases will introduce a headless CMS, external API layer, and MACH-style architecture (Microservices, API-first, Cloud-native, Headless). Each iteration builds on validated decisions from the previous one—working software ships first, complexity follows when justified by real needs.
 
 [**Read more**](/projects/portfolio)
 
