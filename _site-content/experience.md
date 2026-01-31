@@ -12,7 +12,7 @@ ogImage:
 
 **Software Developer**
 
-📧 mikaelsencunningham@outlook.com | 💻 [github.com/mikaelsen-cunningham](https://github.com/mikaelsen-cunningham) | 📍 Manchester, UK
+📧 mikaelsen-cunningham@outlook.com | 💻 [github.com/mikaelsen-cunningham](https://github.com/mikaelsen-cunningham) | 📍 Manchester, UK
 
 ---
 
