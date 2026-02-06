@@ -10,9 +10,6 @@ const Experience = async () => {
     <PageLayout segments={["experience"]}>
       <Container>
         <div className="prose max-w-full">
-          <h1 className="text-4xl font-bold mb-4">
-            Robyn Mikaelsen-cunningham
-          </h1>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </Container>
