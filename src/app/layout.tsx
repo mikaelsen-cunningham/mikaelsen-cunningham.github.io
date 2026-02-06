@@ -1,19 +1,15 @@
-import Footer from "@/app/_components/footer";
-import { CMS_NAME } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
-import Header from "./_components/header";
 
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mikaelsen-cunningham.github.io/"),
   title: `Robyn Mikaelsen-Cunningham`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  description: `Mikaelsen-Cunningham's personal website, showcasing projects, experience, and a roadmap for future development.`,
   openGraph: {
     images: "/avatar.png",
   },
