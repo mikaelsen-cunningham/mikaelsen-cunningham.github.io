@@ -1,7 +1,7 @@
-export function Footer() {
+export const Footer = () => {
   return (
     <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800"></footer>
   );
-}
+};
 
 export default Footer;
