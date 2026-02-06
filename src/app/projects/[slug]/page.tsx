@@ -1,14 +1,10 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllProjects, getProjectBySlug } from "@/lib/getPageDetail";
-import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 
 import Container from "@/app/_components/container";
 import PageLayout from "@/app/_components/page-layout";
-import Alert from "@/app/_components/alert";
-import { PostBody } from "@/app/_components/post-body";
-import { PostHeader } from "@/app/_components/post-header";
 
 export const generateMetadata = async (props: Params): Promise<Metadata> => {
   const params = await props.params;
@@ -18,13 +14,12 @@ export const generateMetadata = async (props: Params): Promise<Metadata> => {
     return notFound();
   }
 
-  const title = `${project.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = project.title;
 
   return {
     title,
     openGraph: {
       title,
-      images: [project.ogImage.url],
     },
   };
 };
@@ -49,16 +44,12 @@ const Project = async ({ params }: Params) => {
 
   return (
     <PageLayout segments={["projects", project.slug]}>
-      <Alert preview={project.preview} />
       <Container>
-        <article className="mb-32">
-          <PostHeader
-            title={project.title}
-            coverImage={project.coverImage}
-            date={project.date}
-            author={project.author}
+        <article>
+          <div
+            className="prose max-w-full"
+            dangerouslySetInnerHTML={{ __html: content }}
           />
-          <PostBody content={content} />
         </article>
       </Container>
     </PageLayout>
