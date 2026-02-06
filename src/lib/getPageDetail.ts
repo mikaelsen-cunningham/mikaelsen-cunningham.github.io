@@ -26,6 +26,6 @@ export const getAllProjects = (): PageDetail[] => {
   const slugs = fs.readdirSync(projectsDirectory);
   const projects = slugs
     .map((slug) => getProjectBySlug(slug))
-    .sort((project1, project2) => (project1.date > project2.date ? -1 : 1));
+    .sort((project1, project2) => project1.title.localeCompare(project2.title));
   return projects;
 };
