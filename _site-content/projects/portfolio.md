@@ -10,9 +10,9 @@ ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
 
-# Portfolio
+# Building for incremental evolution
 
-Why I'm using Next.js and Markdown files to build a statically generated site
+Static site generation with room to grow: when 'simple' means Next.js instead of raw HTML
 
 ## Overview
 
