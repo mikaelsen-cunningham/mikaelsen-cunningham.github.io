@@ -84,51 +84,26 @@ Since content is organized as files, the interface embraces this structure rathe
 
 This file-explorer aesthetic isn't just visual—it's functional. Users instinctively understand how to navigate a file browser. The cognitive load is near zero. And crucially, this interface pattern will scale when the underlying content source evolves from local files to API-driven data.
 
-## The Vision: Evolving to Headless Architecture
-
-The roadmap is structured in phases, with each building on validated decisions from the previous one. Current includes imediate tasks to meet specific goal, Next is a refined list of non-mvp features and the Vision list :
-
-### Current: Markdown MVP
-
-- Local markdown files
-- Static site generation
-- File-explorer UI
-- Core UX patterns established
-
-### Next: Hybrid Architecture
-
-- Introduce headless CMS alongside markdown files
-- Implement content API layer with Next.js API routes
-
-### Vision: Full MACH Architecture
-
-- Decouple frontend into standalone Next.js application
-- Migrate all content to headless CMS
-- Build separate API service
-- Implement edge caching (Cloudflare Workers, Vercel Edge)
-- Add microservices for specific features
-- Real-time content previews
-- Multi-user collaboration
-- Automated workflows
-
-## Why This Approach Works
-
-Building iteratively means shipping value early while learning continuously:
+## What's Next
 
 **What's working:**
 
-- Markdown-based content is faster to update than CMS admin panels
+- Markdown-based content and code live in one place, reducing context switching
 - Static generation delivers exceptional performance
 - The file-browser metaphor provides natural organizing principles
 - Git-based workflow keeps content auditable and versionable
 
 **What needs improvement:**
 
-- Non-technical contributors can't easily add content
-- No dynamic content capabilities
-- Limited content relationships and metadata
+- Adding a post requires a deployment and does not scale
+- Add safe enviroment to test features
+- An on site feedback form would complete the feedback loop
+- Accessibility needs could be futher met by adding in site customization options
+- Site Roadmap should be automatically updated when a ticket is updated in github
 
-These insights directly inform the roadmap. The headless migration isn't about adopting new technology—it's about solving specific, validated problems.
+These next features happen to align with MACH thinking (API-first for GitHub integration, decoupled services for content management and feedback) and modern DevOps practices (multi-environment deployments, automated workflows), but that's not why they're prioritized. They're top of mind because they're current friction points. MACH will help inform implementation design, but it is not the goal for the sake of it.
+
+The full backlog can be found here: [Site Roadmap](/site-roadmap).
 
 ## Living Documentation
 

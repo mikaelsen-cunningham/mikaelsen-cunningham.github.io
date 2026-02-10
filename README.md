@@ -10,7 +10,7 @@ A portfolio website built with modern frontend technology, delivered through an 
 
 Actively developed with an iterative and agile approach, this portfolio project is a demonstration of the knowledge, skills and opinions I've developed in my [7+ years of experience in software development](/experience).
 
-This is a living portfolio project—actively developed with an iterative approach to modern web architecture. The current site is an in-flight **Phase 1** of the [Site Roadmap](/site-roadmap).
+This is a living portfolio project—actively developed with an iterative approach to modern web architecture. The full backlog can be found here: [Site Roadmap](/site-roadmap).
 
 **Current implementation** uses local markdown files for content management, enabling rapid deployment and version-controlled updates. This deliberate MVP choice validates core UX patterns and technical decisions before investing in complex infrastructure. The file-based content structure directly inspired the design system: a file-explorer interface that celebrates simplicity while remaining flexible enough to scale.
 
