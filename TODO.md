@@ -66,6 +66,8 @@ This document tracks all outstanding work items for the project, organized by ty
 
 ⬜ _Implement dynamic root navigation_ - Replace hardcoded nav with dynamic function
 
+⬜ _Implement feedback form_ - Formal way to submit website feedback
+
 ## Tasks - Gitflow Epic
 
 ⬜ _Document gitflow branching strategy_ - Create docs for branch naming, merge strategies, PR requirements
