@@ -86,38 +86,30 @@ This file-explorer aesthetic isn't just visual—it's functional. Users instinct
 
 ## The Vision: Evolving to Headless Architecture
 
-The roadmap is structured in phases, with each building on validated decisions from the previous one:
+The roadmap is structured in phases, with each building on validated decisions from the previous one. Current includes imediate tasks to meet specific goal, Next is a refined list of non-mvp features and the Vision list :
 
-### Phase 1: Markdown MVP (Current)
+### Current: Markdown MVP
 
 - Local markdown files
 - Static site generation
 - File-explorer UI
 - Core UX patterns established
 
-### Phase 2: Hybrid Architecture (Next)
+### Next: Hybrid Architecture
 
 - Introduce headless CMS alongside markdown files
 - Implement content API layer with Next.js API routes
-- Add caching to preserve performance
-- Extend file-explorer UI for both data sources
 
-### Phase 3: Full MACH Architecture (Planned)
+### Vision: Full MACH Architecture
 
 - Decouple frontend into standalone Next.js application
 - Migrate all content to headless CMS
 - Build separate API service
 - Implement edge caching (Cloudflare Workers, Vercel Edge)
 - Add microservices for specific features
-
-### Phase 4: Extended Capabilities (Future)
-
 - Real-time content previews
 - Multi-user collaboration
-- Advanced search
 - Automated workflows
-
-**Guiding principle:** Each phase must justify itself with measurable improvements. Features are added when needed, not because the technology is interesting.
 
 ## Why This Approach Works
 
@@ -138,28 +130,6 @@ Building iteratively means shipping value early while learning continuously:
 
 These insights directly inform the roadmap. The headless migration isn't about adopting new technology—it's about solving specific, validated problems.
 
-## Current Technical Stack
-
-**Foundation:**
-
-- Next.js 14 with App Router
-- TypeScript
-- Tailwind CSS
-- Deployed on Vercel
-
-**Content:**
-
-- Markdown with frontmatter (gray-matter)
-- Remark + Remark-HTML for processing
-- Static site generation
-
-**Coming Soon:**
-
-- Headless CMS (evaluating Sanity, Contentful, Strapi)
-- Redis caching layer
-- Next.js API routes
-- Hybrid content strategy
-
 ## Living Documentation
 
-_This is a living document—last updated January 2026. Follow the project's evolution on [GitHub](https://github.com/mikaelsen-cunningham) or connect on [LinkedIn](https://www.linkedin.com/in/robyn-m-569293136/)._
+_This is a living document—last updated February 2026. Follow the project's evolution on [GitHub](https://github.com/mikaelsen-cunningham) or connect on [LinkedIn](https://www.linkedin.com/in/robyn-m-569293136/)._
