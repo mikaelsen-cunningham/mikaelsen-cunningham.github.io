@@ -10,7 +10,7 @@ author:
 
 **Software Developer**
 
-📧 [Email](mikaelsen-cunningham@outlook.com) | 💻 [GitHub](https://github.com/mikaelsen-cunningham) | 📍 Manchester, UK
+📧 [Email](mailto:mikaelsen-cunningham@outlook.com) | 💻 [GitHub](https://github.com/mikaelsen-cunningham) | 📍 Manchester, UK
 
 Software developer with 7 years delivering agile-focused, highly-scalable test-driven production code. Passionate about collaborative problem-solving across disciplines, with particular focus on accessibility, sustainability, and clean code practices.
 
