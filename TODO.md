@@ -26,6 +26,8 @@ This document tracks all outstanding work items for the project, organized by ty
 
 ## Tasks - Content Creation Epic
 
+🟪 _SPIKE - What Makes a good blog post_ - Research to inform structure and tone
+
 🟪 _Write README content_ - Create comprehensive README.md with overview, setup, tech stack
 
 🟪 _Implement README rendering on homepage_ - Add markdown parser and render README on homepage
@@ -36,9 +38,9 @@ This document tracks all outstanding work items for the project, organized by ty
 
 🟪 _Add Project roadmap page_ - Write todo file and render on project roadmap page
 
-🟨 _Simplify TODO.md document_ - Update todo file to be more succinct
+🟪 _Simplify TODO.md document_ - Update todo file to be more succinct
 
-🟦 _Update experience page with feedback_ - Implement content recomendations from cv on the experience page
+🟪 _Update experience page with feedback_ - Implement content recomendations from cv on the experience page
 
 🟨 _Write post - Tech decisions_ - Document architecture decisions, purpose, and learnings
 
@@ -50,7 +52,7 @@ This document tracks all outstanding work items for the project, organized by ty
 
 ⬜ _Standardize file naming casing_ - Rename files to follow convention, update imports
 
-🟦 _Remove unused code_ - Remove code bloat from next blog starter project
+🟪 _Remove unused code_ - Remove code bloat from next blog starter project
 
 ## Tasks - Features Phase 1 (No Epic)
 
@@ -63,6 +65,8 @@ This document tracks all outstanding work items for the project, organized by ty
 ⬜ _Build issues display component_ - Create UI to display active issues with status
 
 ⬜ _Implement dynamic root navigation_ - Replace hardcoded nav with dynamic function
+
+⬜ _Implement feedback form_ - Formal way to submit website feedback
 
 ## Tasks - Gitflow Epic
 
@@ -98,13 +102,15 @@ This document tracks all outstanding work items for the project, organized by ty
 
 ## Spikes
 
-⬜ Research preview environment options Research and compare deployment options
+⬜ Research preview environment options
 
-⬜ External API architecture research Research API options, create POC, estimate effort
+⬜ Research and compare deployment options
+
+⬜ External API architecture research - Research API options, create POC, estimate effort
 
 ## Tasks - Phase 2 External API Epic
 
-⬜ SPIKE - External API architecture Research API options and create proof of concept
+⬜ SPIKE - External API architecture - Research API options and create proof of concept
 
 ⬜ Design external API structure Design endpoints, data models, auth strategy
 

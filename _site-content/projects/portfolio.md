@@ -10,19 +10,29 @@ ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
 
-# Portfolio
+# Building for incremental evolution
 
-Building Iteratively: From Markdown MVP to Headless Architecture
+Static site generation with room to grow: when 'simple' means Next.js instead of raw HTML
 
 ## Overview
 
-This portfolio is a living codebase—currently in active development with a clear architectural vision. Rather than spending months building the "perfect" tech stack upfront, I'm taking an iterative approach: ship working software quickly, validate core assumptions, then evolve the architecture based on real needs.
+This portfolio is a living codebase, in active development. Rather than spending months building the "perfect" tech stack upfront, I'm taking an iterative approach: ship working software quickly, validate core assumptions, then evolve the architecture based on real needs.
 
-The end goal is a fully decoupled MACH architecture (Microservices, API-first, Cloud-native, Headless) with external content management and modular services. But getting there starts with the simplest thing that works: local markdown files and static site generation.
+I've been fortunate to work on projects long enough to see my own "good decisions" create maintenance headaches years later, and to learn better frameworks from developers far more experienced than me. Not every developer gets the opportunity to stay with a codebase through greenfield excitement into long-term reality, or to work alongside people who've already made (and recovered from) those mistakes.
 
-## Current Implementation: Markdown-First Content
+My goal is to share what I've learned in my experience as a software developer, yes in the odd blog post or side project, but more importantly in the public practice of this project's evolutionary architecture. Decisions are documented, trade-offs are visible, reasoning is explicit. The approach follows real options thinking: defer commitments until the last responsible moment, choose foundations that serve multiple futures.
 
-Right now, content lives in local markdown files committed directly to the repository:
+## Current Implementation
+
+**Tech Stack:** Next.js 15 (App Router), TypeScript, Tailwind CSS, Markdown for content management, deployed with Github Pages
+
+**Why these choices?**
+
+**TypeScript + Tailwind:** Modern, productive tooling I use professionally. Familiar tools reduce cognitive overhead, letting me focus on architecture and content rather than fighting unfamiliar syntax.
+
+**Github Pages:** GitHub already stores the code and manages the content, so hosting there removes an unnecessary dependency. GitHub Pages handles static site deployment with zero configuration, and switching to Vercel later takes minutes if requirements change. Keep it simple until complexity is justified.
+
+**Local Markdown files:** The simplest content solution that works right now. No external dependencies, easy to version control, straightforward to replace when (if) external APIs become necessary. This is YAGNI in action—defer the complexity until it's actually needed.
 
 ```typescript
 // Content structure with frontmatter
@@ -36,13 +46,19 @@ tags: ["architecture", "agile"]
 Content here...
 ```
 
-Next.js processes these at build time:
+**Next.js:** Familiar framework that unlocks multiple architectural futures (SSG today, SSR tomorrow, API routes when needed) without locking me into any single approach. The initial setup cost is higher than raw HTML, but the long-term flexibility and iteration speed make it the simpler choice over the project's lifetime.
+
+Next.js processes the markdown files at build time:
 
 ```typescript
-export async function getStaticProps() {
-  const posts = getAllPosts(["title", "date", "slug", "content"]);
-  return { props: { posts } };
+const { slug } = await params;
+const project = getProjectBySlug(slug);
+
+if (!project) {
+  return notFound();
 }
+
+const content = await markdownToHtml(project.content || "");
 ```
 
 This approach delivers:
@@ -52,7 +68,9 @@ This approach delivers:
 - **Performance**: Static generation means sub-100ms page loads
 - **Developer velocity**: Edit markdown files directly in VS Code
 
-The markdown-first implementation isn't a limitation—it's a deliberate MVP choice that lets me validate UX patterns and content structure before investing in complex infrastructure.
+**What's deliberately simple:** No CMS, no database, no authentication, no external APIs. This implementation isn't a limitation—it's a deliberate MVP choice that lets me validate UX patterns and content structure before investing in complex infrastructure. Further complexity might come later when requirements demand them, but adding them now would be premature optimization for uncertain futures.
+
+**What's built for evolution:** Component architecture follows SOLID principles. Content is abstracted behind interfaces that can swap markdown for API responses without touching consuming components. The deployment pipeline is already production-grade, ready to scale when traffic or features demand it.
 
 ## Design System: Celebrating the File Structure
 
@@ -66,82 +84,27 @@ Since content is organized as files, the interface embraces this structure rathe
 
 This file-explorer aesthetic isn't just visual—it's functional. Users instinctively understand how to navigate a file browser. The cognitive load is near zero. And crucially, this interface pattern will scale when the underlying content source evolves from local files to API-driven data.
 
-## The Vision: Evolving to Headless Architecture
-
-The roadmap is structured in phases, with each building on validated decisions from the previous one:
-
-### Phase 1: Markdown MVP (Current)
-
-- Local markdown files
-- Static site generation
-- File-explorer UI
-- Core UX patterns established
-
-### Phase 2: Hybrid Architecture (Next)
-
-- Introduce headless CMS alongside markdown files
-- Implement content API layer with Next.js API routes
-- Add caching to preserve performance
-- Extend file-explorer UI for both data sources
-
-### Phase 3: Full MACH Architecture (Planned)
-
-- Decouple frontend into standalone Next.js application
-- Migrate all content to headless CMS
-- Build separate API service
-- Implement edge caching (Cloudflare Workers, Vercel Edge)
-- Add microservices for specific features
-
-### Phase 4: Extended Capabilities (Future)
-
-- Real-time content previews
-- Multi-user collaboration
-- Advanced search
-- Automated workflows
-
-**Guiding principle:** Each phase must justify itself with measurable improvements. Features are added when needed, not because the technology is interesting.
-
-## Why This Approach Works
-
-Building iteratively means shipping value early while learning continuously:
+## What's Next
 
 **What's working:**
 
-- Markdown-based content is faster to update than CMS admin panels
+- Markdown-based content and code live in one place, reducing context switching
 - Static generation delivers exceptional performance
 - The file-browser metaphor provides natural organizing principles
 - Git-based workflow keeps content auditable and versionable
 
 **What needs improvement:**
 
-- Non-technical contributors can't easily add content
-- No dynamic content capabilities
-- Limited content relationships and metadata
+- Adding a post requires a deployment and does not scale
+- Add safe enviroment to test features
+- An on site feedback form would complete the feedback loop
+- Accessibility needs could be futher met by adding in site customization options
+- Site Roadmap should be automatically updated when a ticket is updated in github
 
-These insights directly inform the roadmap. The headless migration isn't about adopting new technology—it's about solving specific, validated problems.
+These next features happen to align with MACH thinking (API-first for GitHub integration, decoupled services for content management and feedback) and modern DevOps practices (multi-environment deployments, automated workflows), but that's not why they're prioritized. They're top of mind because they're current friction points. MACH will help inform implementation design, but it is not the goal for the sake of it.
 
-## Current Technical Stack
-
-**Foundation:**
-
-- Next.js 14 with App Router
-- TypeScript
-- Tailwind CSS
-- Deployed on Vercel
-
-**Content:**
-
-- Markdown with frontmatter (gray-matter)
-- Remark + Remark-HTML for processing
-- Static site generation
-
-**Coming Soon:**
-
-- Headless CMS (evaluating Sanity, Contentful, Strapi)
-- Redis caching layer
-- Next.js API routes
-- Hybrid content strategy
+The full backlog can be found here: [Site Roadmap](/site-roadmap).
 
 ## Living Documentation
 
-_This is a living document—last updated January 2026. Follow the project's evolution on [GitHub](https://github.com/mikaelsen-cunningham) or connect on [LinkedIn](https://www.linkedin.com/in/robyn-m-569293136/)._
+_This is a living document—last updated February 2026. Follow the project's evolution on [GitHub](https://github.com/mikaelsen-cunningham) or connect on [LinkedIn](https://www.linkedin.com/in/robyn-m-569293136/)._
