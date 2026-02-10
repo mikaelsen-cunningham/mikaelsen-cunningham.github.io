@@ -16,7 +16,7 @@ This document tracks all outstanding work items for the project, organized by ty
 
 ## Epics
 
-🟨 _Content Creation and Documentation_ - Create all written content for the site including README, blog posts, and project documentation
+🟪 _Content Creation and Documentation_ - Create all written content for the site including README, blog posts, and project documentation
 
 ⬜ _Gitflow Implementation with GitHub Actions_ - Implement complete gitflow branching strategy with automated workflows
 
@@ -42,9 +42,9 @@ This document tracks all outstanding work items for the project, organized by ty
 
 🟪 _Update experience page with feedback_ - Implement content recomendations from cv on the experience page
 
-🟨 _Write post - Tech decisions_ - Document architecture decisions, purpose, and learnings
+🟪 _Write post - Tech decisions_ - Document architecture decisions, purpose, and learnings
 
-🟦 _Write post - Non-fiction writers site_ - Post about other website project
+🟪 _Write post - Non-fiction writers site_ - Post about other website project
 
 ## Tasks - Code Improvements (No Epic)
 
