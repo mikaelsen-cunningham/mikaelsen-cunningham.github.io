@@ -14,9 +14,7 @@ This is a living portfolio project—actively developed with an iterative approa
 
 **Current implementation** uses local markdown files for content management, enabling rapid deployment and version-controlled updates. This deliberate MVP choice validates core UX patterns and technical decisions before investing in complex infrastructure. The file-based content structure directly inspired the design system: a file-explorer interface that celebrates simplicity while remaining flexible enough to scale.
 
-**Where it's going:** Future phases will introduce a headless CMS, external API layer, and MACH-style architecture (Microservices, API-first, Cloud-native, Headless). Each iteration builds on validated decisions from the previous one—working software ships first, complexity follows when justified by real needs.
-
-[**Read more**](/projects/portfolio)
+**Where it's going:** Future phases will introduce a headless CMS, external API layer, and MACH-style architecture (Microservices, API-first, Cloud-native, Headless). Each iteration builds on validated decisions from the previous one—working software ships first, complexity follows when justified by real needs. Read more about this project's decision making and architectural philosophy here: [Portfolio Project - Building for incremental evolution](/projects/portfolio)
 
 **Built With:**
 
